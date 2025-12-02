@@ -21,4 +21,6 @@ public class Apple extends Actor
         // Add your action code here.
         setLocation (getX(), getY()+1);
     }
+    
+
 }
