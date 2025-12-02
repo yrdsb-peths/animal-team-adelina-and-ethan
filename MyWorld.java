@@ -2,11 +2,9 @@ import greenfoot.*;
 
 public class MyWorld extends World {
     public MyWorld() {
-<<<<<<< Updated upstream
 
         super(600, 400, 1);
-=======
->>>>>>> Stashed changes
+
         //setImage("background.jpg");
         
         super(600, 400, 1, false);
