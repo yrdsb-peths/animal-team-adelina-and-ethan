@@ -2,9 +2,8 @@ import greenfoot.*;
 
 public class MyWorld extends World {
     public MyWorld() {
-<<<<<<< Updated upstream
+
         super(600, 400, 1);
-=======
         //setImage("background.jpg");
         
         super(600, 400, 1, false);
@@ -43,6 +42,5 @@ public class MyWorld extends World {
         Apple apple= new Apple();
         int x = Greenfoot.getRandomNumber(600);
         addObject(apple, x, 0);
->>>>>>> Stashed changes
     }
 }
