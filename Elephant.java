@@ -25,6 +25,7 @@ public class Elephant extends Actor
         
         for (int i=0; i< idleLeft.length; i++) {
             idleLeft[i] = new GreenfootImage ("images/elephant_idle/idle"+ i +".png");
+            idleLeft[i].mirrorHorizontally();
             idleLeft[i].scale (100, 100);
         }
         setImage(idleRight[0]);
@@ -35,8 +36,14 @@ public class Elephant extends Actor
      */
     int imageIndex = 0;
     public void animateElephant() {
-        setImage (idle[imageIndex]);
-        imageIndex = (imageIndex+1) % idle.length;
+        if (facing.equals("right")) {
+            setImage (idleRight[imageIndex]);
+            imageIndex = (imageIndex+1) % idleRight.length;
+        } else {
+            setImage (idleLeft[imageIndex]);
+            imageIndex = (imageIndex+1) % idleLeft.length;
+        }
+        
     }
     
     public void act()
@@ -44,8 +51,10 @@ public class Elephant extends Actor
         // Add your action code here.
         if (Greenfoot.isKeyDown("left")) {
             move(-1);
+            facing = "left";
         } else if (Greenfoot.isKeyDown("right")) {
             move(1);
+            facing = "right";
         }
         
         // remove apple is elephant eats it
