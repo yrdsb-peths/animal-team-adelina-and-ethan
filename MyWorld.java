@@ -1,12 +1,9 @@
 import greenfoot.*;
 
 public class MyWorld extends World {
+    public int score = 0;
+    Label scoreLabel;
     public MyWorld() {
-
-        super(600, 400, 1);
-
-        //setImage("background.jpg");
-        
         super(600, 400, 1, false);
         
         //create the elephant object
