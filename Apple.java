@@ -12,8 +12,10 @@ public class Apple extends Actor
      * Act - do whatever the Apple wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    GreenfootImage apple = new GreenfootImage ("images/apple.png");
     public Apple() {
-        setImage("images/apple.png");
+        setImage (apple);
+        apple.scale (40, 40);
     }
     
     public void act()
