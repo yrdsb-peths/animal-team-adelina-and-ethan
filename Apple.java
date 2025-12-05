@@ -18,11 +18,12 @@ public class Apple extends Actor
         apple.scale (40, 40);
     }
     
-    private int speed = 1;
+    int speed = 1;
+    
     public void act()
     {
         // Add your action code here.
-        setLocation (getX(), getY()+1);
+        setLocation (getX(), getY()+ speed);
         
         // remove appl eand draw game over when apple gets to bottom
         MyWorld world = (MyWorld) getWorld();
