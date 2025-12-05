@@ -18,7 +18,6 @@ public class Apple extends Actor
         apple.scale (40, 40);
     }
     
-    private int speed = 1;
     public void act()
     {
         // Add your action code here.
@@ -32,7 +31,5 @@ public class Apple extends Actor
         }
     }
     
-    public void setSpeed(int spd){
-        speed = spd;
-    }
+
 }
